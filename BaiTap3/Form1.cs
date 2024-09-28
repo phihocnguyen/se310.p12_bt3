@@ -63,7 +63,7 @@ namespace BaiTap3
             List<SanPham> newList = list.Where(item => item.XuatXu == delXuatXu.Text).ToList();
             if (newList.Count != 0)
             {
-                foreach(SanPham item in newList)
+                foreach (SanPham item in newList)
                 {
                     list.Remove(item);
                 }
@@ -75,9 +75,13 @@ namespace BaiTap3
 
         private void btnSanPhamHopLe_Click(object sender, EventArgs e)
         {
-            SanPham item = list.Where(item => item.NgayHetHan < DateTime.Now.Date).First();
-            if (item != null) MessageBox.Show("Co san pham het han");
-            MessageBox.Show("Khong co san pham het han");
+            if (list.Count != 0)
+            {
+                SanPham item = list.Where(item => item.NgayHetHan < DateTime.Now.Date).First();
+                if (item != null) MessageBox.Show("Co san pham het han");
+                MessageBox.Show("Khong co san pham het han");
+            }
+            else MessageBox.Show("Khong co san pham trong kho");
         }
 
         private void delAllBtn_Click(object sender, EventArgs e)
@@ -146,7 +150,7 @@ namespace BaiTap3
 
         private void sanPhamTrongPhamViBtn_Click(object sender, EventArgs e)
         {
-            dgv2.Rows.Clear();  
+            dgv2.Rows.Clear();
             List<SanPham> newList = list.Where(item => (item.DonGia >= Convert.ToDouble(tbA.Text) && item.DonGia <= Convert.ToDouble(tbB.Text))).ToList();
             if (newList.Count > 0)
             {

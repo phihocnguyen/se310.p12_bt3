@@ -464,9 +464,9 @@
             // 
             // delSanPhamQuaHanBtn
             // 
-            delSanPhamQuaHanBtn.Location = new Point(172, 131);
+            delSanPhamQuaHanBtn.Location = new Point(154, 131);
             delSanPhamQuaHanBtn.Name = "delSanPhamQuaHanBtn";
-            delSanPhamQuaHanBtn.Size = new Size(117, 58);
+            delSanPhamQuaHanBtn.Size = new Size(135, 58);
             delSanPhamQuaHanBtn.TabIndex = 24;
             delSanPhamQuaHanBtn.Text = "Xóa toàn bộ SP quá hạn";
             delSanPhamQuaHanBtn.UseVisualStyleBackColor = true;
@@ -476,7 +476,7 @@
             // 
             delAllBtn.Location = new Point(15, 131);
             delAllBtn.Name = "delAllBtn";
-            delAllBtn.Size = new Size(117, 58);
+            delAllBtn.Size = new Size(133, 58);
             delAllBtn.TabIndex = 23;
             delAllBtn.Text = "Xóa toàn bộ SP trong kho";
             delAllBtn.UseVisualStyleBackColor = true;
